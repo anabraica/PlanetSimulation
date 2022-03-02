@@ -6,7 +6,6 @@ pygame.init()
 WIDTH, HEIGHT = 800, 800
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("the planets' orbits—Ana's creation")
-WIN.fill((0, 0, 0))
 
 WHITE = (255, 255, 255)
 YELLOW = (255, 255, 0)
@@ -91,7 +90,6 @@ class Planet:
 def main():
     run = True
     clock = pygame.time.Clock()
-    #clock.tick(60) #?
     
     sun = Planet(0, 0, 30, YELLOW, 1.98892 * 10 ** 30) # mass is in kg
     sun.sun = True
@@ -99,10 +97,10 @@ def main():
     earth = Planet(-1 * Planet.AU, 0, 16, BLUE, 5.9742 * 10 ** 24)
     earth.y_vel = 29.783 * 1000
     
-    mercury = Planet(0.387 * Planet.AU, 0, 8, GREY, 0.330 * 10 ** 24)
+    mercury = Planet(0.387 * Planet.AU, 0, 8, GREY, 3.30 * 10 ** 23)
     mercury.y_vel = -47.4 * 1000
     
-    venus= Planet(0.723 * Planet.AU, 0, 14, WHITE, 4.8685 * 10 ** 24)
+    venus = Planet(0.723 * Planet.AU, 0, 14, WHITE, 4.8685 * 10 ** 24)
     venus.y_vel = -35.02 * 1000
     
     mars = Planet(-1.524 * Planet.AU, 0, 12, RED, 6.39 * 10 ** 23)
@@ -112,10 +110,8 @@ def main():
     
     
     while run:
-        clock = pygame.time.Clock()
         clock.tick(60)
         WIN.fill((0, 0, 0))
-        pygame.display.flip()
         
         
         for event in pygame.event.get():
@@ -127,6 +123,6 @@ def main():
             planet.draw(WIN)
         
         pygame.display.update()
-        pygame.quit()
+    pygame.quit()
 
 main()
