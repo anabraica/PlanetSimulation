@@ -51,7 +51,7 @@ class Planet:
             pygame.draw.lines(win, self.color, False, updated_points, 2)
         
         if not self.sun:
-            distance_text = FONT.render(f"{round(self.distance_to_sun/1000, 1 )}km", 1, WHITE)
+            distance_text = FONT.render(f"{round(self.distance_to_sun / 1000, 1)} km", 1, WHITE)
             win.blit(distance_text, (x - distance_text.get_width() / 2, y - distance_text.get_height() / 2))
         
         pygame.draw.circle(win, self.color, (x, y), self.radius)
@@ -93,7 +93,7 @@ def main():
     clock = pygame.time.Clock()
     #clock.tick(60) #?
     
-    sun = Planet(0, 0 , 30, YELLOW , 1.98892*10**30) # mass is in kg
+    sun = Planet(0, 0 , 30, YELLOW , 1.98892 * 10 ** 30) # mass is in kg
     sun.sun = True
     
     earth = Planet(-1 * Planet.AU, 0, 16, BLUE, 5.9742 * 10 ** 24)
@@ -114,7 +114,7 @@ def main():
     while run:
         clock = pygame.time.Clock()
         clock.tick(60)
-        WIN.fill((0,0,0))
+        WIN.fill((0, 0, 0))
         pygame.display.flip()
         
         
