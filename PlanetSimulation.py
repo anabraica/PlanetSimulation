@@ -3,10 +3,10 @@ import math
 pygame.init()
 
 
-WIDTH , HEIGHT = 800, 800
+WIDTH, HEIGHT = 800, 800
 WIN = pygame.display.set_mode((WIDTH , HEIGHT))
 pygame.display.set_caption("the planets' orbits—Ana's creation")
-WIN.fill((0,0,0))
+WIN.fill((0, 0, 0))
 
 WHITE = (255, 255, 255)
 YELLOW = (255, 255, 0)
